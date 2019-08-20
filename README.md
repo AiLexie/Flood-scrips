@@ -1,27 +1,42 @@
-# Flood-scrips
-SynFlood Udp floods irc etc (scrips
+# Saddam
+DDoS Tool that supports:
+  * DNS Amplification (Domain Name System)
+  * NTP Amplification (Network Time Protocol)
+  * SNMP Amplification (Simple Network Management Protocol)
+  * SSDP Amplification (Simple Service Discovery Protocol)
+
+![](http://2.bp.blogspot.com/-TkNwFJsznto/VOs3l0uSgDI/AAAAAAAAALQ/S5BNt8ULwpg/s1600/9.png)
+
+Read more about DDoS Amplification Attacks [here](http://www.pythonforpentesting.com/2015/02/ddos-amplification-attacks.html)
+
+Donation would be much appreciated: 1Gi5Rpz5RBEUpGknSwyRgqzk7b5bQ7Abp2
+# Requierments
+ * OS Supports raw sockets
+ * Python 2.7
+ * [Pinject](https://github.com/OffensivePython/Pinject)
+
+# Usage
+```
+	   _____           __    __              
+	  / ___/____ _____/ /___/ /___ _____ ___ 
+	  \__ \/ __ `/ __  / __  / __ `/ __ `__ \
+	 ___/ / /_/ / /_/ / /_/ / /_/ / / / / / /
+	/____/\__,_/\__,_/\__,_/\__,_/_/ /_/ /_/ 
+	https://github.com/OffensivePython/Saddam
+	   https://twitter.com/OffensivePython
+
+Usage: 
+Saddam.py target.com [options]        # DDoS
+Saddam.py benchmark [options]         # Calculate AMPLIFICATION factor
 
 
- 
-IRC Botnet
-Perl based DDoS IRC botnet, intially pulled from: http://202.202.121.27/bot.txt. Work in progress to serve for educational purposes only.
-
-Running
-This bot only requires perl to run; and an IRC server as a C&C server.
-
-Download and extract the latest perl file.
-
-$ perl bot.pl 192.168.0.1
-C&C
-Ensure you have an IRC server running on port 6667 (default setting), and login as user admin (default setting) and channel #bot_room (default setting). Initiate the help command: !u @help
-
-<@admin> !u @help
-<zombie>  [Help] ======================= 
-<zombie>  [Help] w0rmer PerlBot Main Help:  
-<zombie>  [Help] ======================= 
-<zombie>  [Help] !u @system              
-<zombie>  [Help] !u @version             
-<zombie>  [Help] !u @channel             
-<zombie>  [Help] !u @flood               
-<zombie>  [Help] !u @utils               
-<zombie>  [Help] ======================= 
+Options:
+  -h, --help            show this help message and exit
+  -d FILE:FILE|DOMAIN, --dns=FILE:FILE|DOMAIN
+                        DNS Amplification File and Domains to Resolve (e.g:
+                        dns.txt:[evildomain.com|domains_file.txt]
+  -n FILE, --ntp=FILE   NTP Amplification file
+  -s FILE, --snmp=FILE  SNMP Amplification file
+  -p FILE, --ssdp=FILE  SSDP Amplification file
+  -t N, --threads=N     Number of threads (default=1)
+```
